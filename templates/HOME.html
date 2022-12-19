@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.0/lottie.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="/static/script.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+<div class="nav"></div>
+<div class="form">
+    <form id="bmrform">
+        <h1>BMR</h1>
+        <label>เพศ<select id="sex" name="sex">
+                <option value="ชาย"><p>ชาย</p></option>
+                <option value="หญิง"><p>หญิง</p></option>
+            </select></label>
+        <label>น้ำหนักตัว (kg.)<br><input class="textform" id="weight" name="weight"type="number" value="" min="1" max="100000"></label>
+        <label>ความสูง (cm.)<br><input class="textform" id="height" name="height" type="number" value="" min="1" max="100000"></label>
+        <label>อายุ (ปี)<br><input class="textform" id="age" name="age" type="number" value="" min="1" max="100000"></label>
+        <input id="submit" name="submit" type="submit" value="คำนวณ">
+    </form>
+    <div class="ans">
+        <p>BMR(kcal)</p>
+        <p id="output1">0</p>
+        <div id="test1"></div> 
+    </div>
+    
+ 
+    <form id="tdeeform">
+        <h1>TDEE</h1>
+        <label class="tdeecheck" ><input type="checkbox" name="1" id="1" value="1" class="tdeechoice"> ไม่ออกกำลังกาย </label>
+        <label class="tdeecheck" ><input type="checkbox" name="2" id="2" value="2" class="tdeechoice"> ออกกำลังกายเบาๆ (1-2 ครั้งต่อสัปดาห์)</label>
+        <label class="tdeecheck" ><input type="checkbox" name="3" id="3" value="3" class="tdeechoice"> ออกกำลังกายปานกลาง (3-5 ครั้งต่อสัปดาห์)</label>
+        <label class="tdeecheck" ><input type="checkbox" name="4" id="4" value="4" class="tdeechoice"> ออกกำลังกายหนัก (6-7 ครั้งต่อสัปดาห์)</label>
+        <label class="tdeecheck" ><input type="checkbox" name="5" id="5"value="5" class="tdeechoice">  ออกกำลังกายหนักมาก (ทุกวัน วันละ 2 เวลา)</label>
+        <input id="submit" name="submit" type="submit" value="คำนวณ">
+    </form>
+    <div class="ans">
+        <p>TDEE(kcal)</p>
+        <p id="output2">0</p>
+        <div id="test2"></div> 
+    </div>
+    
+    <form id="calform">
+        <h1>CAL</h1>
+        <label>น้ำหนักตัวที่ต้องการ (kg.)<br><input class="textform" id="newweight" name="newweight" type="number" value="" min="1" max="100000"></label>
+        <label>จำนวนวัน<br><input class="textform" id="day" name="day" type="number" value="" min="1" max="100000"></label>
+        <input id="submit" name="submit" type="submit" value="คำนวณ">
+    </form>
+    <div class="ans">
+        <p>CAL(kcal)</p>
+        <p id="output3">0</p>
+        <div id="test3"></div> 
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script> 
+</div>
+
+</body>
+</html>
