@@ -80,7 +80,8 @@ select{
     margin: 25pt 0pt 25pt 0pt;
     display: grid;
     width:100%; 
-    height: 27vh;
+    max-height: 200pt;
+    height: 25vmax;
     border-radius: 10pt;
     grid-template-rows: repeat(2,50%);
     grid-template-columns: repeat(2,50%);

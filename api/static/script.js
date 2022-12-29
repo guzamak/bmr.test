@@ -23,7 +23,7 @@ var animation3 = bodymovin.loadAnimation({
 var test5 = {};
 
 $( document ).ready(function() {
-
+	
 	$('#bmrform').on('submit', function(event) {
 
         $('#output1').animate({ opacity: 1 }, 500);
