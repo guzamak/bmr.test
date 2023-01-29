@@ -16,7 +16,6 @@ def bmrcal():
     h = request.form['height']
     a = request.form['age']
     bmr = calculator.BMRCAL(s,w,h,a)
-    print (type(bmr))
     return jsonify({"bmr" : bmr})
 
 @app.route('/tdeecal',methods=["post"])
